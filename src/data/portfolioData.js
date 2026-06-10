@@ -72,7 +72,15 @@ export const portfolioData = {
         repo: "https://github.com/maingiNatasha/task-mern"
       }
     },
-  ]
+  ],
+  contact: {
+    email: "mainginatasha@gmail.com",
+    phone: "+254717872584",
+    links: {
+      github: "https://github.com/maingiNatasha",
+      linkedin: "https://www.linkedin.com/in/natasha-maingi-026a4a254/"
+    }
+  }
 };
 
 export default portfolioData;
