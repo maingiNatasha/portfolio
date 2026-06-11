@@ -152,57 +152,57 @@ export default function Contact() {
               </div>
 
               <div className="grid gap-4">
-                <div className="flex items-center gap-4 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4">
-                  <MdOutlineEmail size={25} />
+                <div className="group flex items-center gap-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
+                  <MdOutlineEmail size={21} className="transition-colors duration-300 group-hover:text-cyan-300" />
                   <div>
                     <p className="text-sm text-zinc-500">Email</p>
-                    
+
                     <a
                       href={`mailto:${portfolioData.contact.email}`}
-                      className="block text-zinc-100 transition-colors hover:text-cyan-300"
+                      className="block text-zinc-100 transition-colors duration-300 hover:text-cyan-300"
                     >
                       {portfolioData.contact.email}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4">
-                  <MdOutlineLocalPhone size={25} />
+                <div className="group flex items-center gap-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
+                  <MdOutlineLocalPhone size={21} className="transition-colors duration-300 group-hover:text-cyan-300" />
                   <div>
                     <p className="text-sm text-zinc-500">Phone</p>
                     <a
                       href={`tel:${portfolioData.contact.phone}`}
-                      className="block cursor-pointer text-zinc-100 transition-colors hover:text-cyan-300"
+                      className="block cursor-pointer text-zinc-100 transition-colors duration-300 hover:text-cyan-300"
                     >
                       +254 717 872 584
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4">
-                  <FiGithub size={25} />
+                <div className="group flex items-center gap-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
+                  <FiGithub size={21} className="transition-colors duration-300 group-hover:text-cyan-300" />
                   <div>
                     <p className="text-sm text-zinc-500">GitHub</p>
                     <a
                       href={portfolioData.contact.links.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="block text-zinc-100 transition-colors hover:text-cyan-300"
+                      className="block text-zinc-100 transition-colors duration-300 hover:text-cyan-300"
                     >
                       {portfolioData.contact.links.github}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4">
-                  <FiLinkedin size={25} />
+                <div className="group flex items-center gap-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
+                  <FiLinkedin size={21} className="transition-colors duration-300 group-hover:text-cyan-300" />
                   <div>
                     <p className="text-sm text-zinc-500">LinkedIn</p>
                     <a
                       href={portfolioData.contact.links.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="block text-zinc-100 transition-colors hover:text-cyan-300"
+                      className="block text-zinc-100 transition-colors duration-300 hover:text-cyan-300"
                     >
                       {portfolioData.contact.links.linkedin}
                     </a>

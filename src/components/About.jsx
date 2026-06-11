@@ -1,25 +1,30 @@
 import portfolioData from "../data/portfolioData";
+import { FiMonitor, FiServer, FiCloud, FiDatabase } from "react-icons/fi";
 
 export default function About() {
   const skillGroups = [
     {
       key: "frontend",
       label: "Frontend",
+      icon: FiMonitor,
       items: portfolioData.skills.frontend
     },
     {
       key: "backend",
       label: "Backend",
+      icon: FiServer,
       items: portfolioData.skills.backend
     },
     {
       key: "cloudDeployment",
       label: "Cloud & Deployment",
+      icon: FiCloud,
       items: portfolioData.skills.cloudDeployment
     },
     {
       key: "databases",
       label: "Databases",
+      icon: FiDatabase,
       items: portfolioData.skills.databases
     }
   ];
@@ -68,21 +73,28 @@ export default function About() {
           </div>
 
           <div className="grid gap-4">
-            {skillGroups.map((group) => (
-              <div key={group.key} className="rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4">
-                <p className="text-sm text-zinc-500">{group.label}</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {group.items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-zinc-800/70 bg-zinc-950/50 px-3 py-1 text-sm text-zinc-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+            {skillGroups.map((group) => {
+              const Icon = group.icon;
+
+              return (
+                <div key={group.key} className="rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
+                  <div className="flex items-center gap-2">
+                    <Icon className="text-cyan-300" />
+                    <p className="text-sm text-zinc-500">{group.label}</p>
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {group.items.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full border border-zinc-800/70 bg-zinc-950/50 px-3 py-1 text-sm text-zinc-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
