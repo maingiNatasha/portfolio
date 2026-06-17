@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import portfolioData from "../data/portfolioData";
+import FadeInDiv from "./FadeInDiv";
 
 const previewClampStyle = {
   display: "-webkit-box",
@@ -31,7 +32,7 @@ export default function Projects() {
   }, [activeProject]);
 
   return (
-    <>
+    <FadeInDiv>
       <section id="projects" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -223,6 +224,6 @@ export default function Projects() {
           </div>
         </div>
       )}
-    </>
+    </FadeInDiv>
   );
 }

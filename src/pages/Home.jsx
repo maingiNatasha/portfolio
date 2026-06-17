@@ -5,10 +5,10 @@ import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-export default function Home() {
+export default function Home({ theme, onToggleTheme }) {
   return (
     <main className="text-zinc-100">
-      <Navbar />
+      <Navbar theme={theme} onToggleTheme={onToggleTheme} />
       <Hero />
       <About />
       <Projects />

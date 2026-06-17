@@ -1,4 +1,8 @@
-export default function Navbar() {
+import { FiMoon, FiSun } from "react-icons/fi";
+
+export default function Navbar({ theme, onToggleTheme }) {
+  const isLight = theme === "light";
+
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-800/60 bg-zinc-950/70 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
@@ -21,7 +25,17 @@ export default function Navbar() {
           <a href="#contact" className="text-zinc-300 transition-all duration-300 hover:text-cyan-300 hover:-translate-y-0.5">
             Contact
           </a>
+          
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            aria-label={`Switch to ${isLight ? "dark" : "light"} mode`}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900 text-zinc-100 transition-all duration-300 hover:border-cyan-400/50 hover:bg-zinc-800 hover:text-cyan-300"
+          >
+            {isLight ? <FiSun size={18} /> : <FiMoon size={18} />}
+          </button>
         </nav>
+
       </div>
     </header>
   );
