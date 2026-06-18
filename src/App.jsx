@@ -1,29 +1,10 @@
 import { useEffect, useState } from "react";
-import Home from "./pages/Home";
-
-function getInitialTheme() {
-  if (typeof window === "undefined") return "dark";
-
-  const savedTheme = window.localStorage.getItem("theme");
-  if (savedTheme === "dark" || savedTheme === "light") {
-    return savedTheme;
-  }
-
-  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-}
+import { useTheme } from "./theme/useTheme.js";
+import Home from "./pages/Home.jsx";
 
 export default function App() {
-  const [theme, setTheme] = useState(getInitialTheme);
+  const { theme } = useTheme();
   const isLight = theme === "light";
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    window.localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const handleToggleTheme = () => {
-    setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
-  };
 
   return (
     <div
@@ -77,7 +58,7 @@ export default function App() {
       />
 
       <div className="relative z-10">
-        <Home theme={theme} onToggleTheme={handleToggleTheme} />
+        <Home />
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
+import { useTheme } from "../theme/useTheme";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-export default function Navbar({ theme, onToggleTheme }) {
+export default function Navbar() {
+  const { theme, toggleTheme } = useTheme();
   const isLight = theme === "light";
 
   return (
@@ -28,14 +30,13 @@ export default function Navbar({ theme, onToggleTheme }) {
           
           <button
             type="button"
-            onClick={onToggleTheme}
+            onClick={toggleTheme}
             aria-label={`Switch to ${isLight ? "dark" : "light"} mode`}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900 text-zinc-100 transition-all duration-300 hover:border-cyan-400/50 hover:bg-zinc-800 hover:text-cyan-300"
           >
             {isLight ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>
         </nav>
-
       </div>
     </header>
   );
