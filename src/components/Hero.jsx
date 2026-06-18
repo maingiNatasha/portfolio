@@ -8,13 +8,13 @@ export default function Hero() {
       <section id="hero" className="min-h-screen flex items-center px-6 relative">
         <div className="relative w-full max-w-6xl mx-auto grid items-center gap-12 py-16 lg:grid-cols-[1.35fr_0.85fr]">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-8">
-            <div className="inline-flex items-center gap-3 rounded-full border border-zinc-800/60 bg-zinc-950/40 px-5 py-2.5 text-sm text-zinc-300 backdrop-blur">
+            <div className="inline-flex items-center gap-3 rounded-full border border-(--border) bg-(--surface) px-5 py-2.5 text-sm text-(--text-muted) backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-400" />
               Available for freelance and full-time roles
             </div>
 
             <div className="max-w-3xl space-y-5">
-              <h1 className="text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
+              <h1 className="text-(--text-primary) text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
                 Hi, I&apos;m{" "}
                 <span className="bg-linear-to-r from-cyan-300 to-sky-300 bg-clip-text text-transparent">
                   Natasha

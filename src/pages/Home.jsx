@@ -7,7 +7,7 @@ import Footer from "../components/Footer.jsx";
 
 export default function Home() {
   return (
-    <main className="text-zinc-100">
+    <main className="text-(--text)">
       <Navbar />
       <Hero />
       <About />
