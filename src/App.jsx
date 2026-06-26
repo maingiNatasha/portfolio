@@ -10,11 +10,11 @@ export default function App() {
     <div
       className="relative isolate min-h-screen overflow-hidden transition-colors duration-300"
       style={{
-        backgroundColor: "var(--bg)",
-        color: "var(--text)"
+        backgroundColor: "var(--color-bg)",
+        color: "var(--color-text-primary)"
       }}
     >
-      <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "var(--bg)" }} />
+      <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "var(--color-bg)" }} />
       <div
         aria-hidden
         className="absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full blur-3xl"
