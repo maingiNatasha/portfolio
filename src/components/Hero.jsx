@@ -51,7 +51,7 @@ export default function Hero() {
           </div>
 
           <div className="relative mx-auto w-full max-w-xs lg:max-w-sm lg:justify-self-end">
-            <div className="group overflow-hidden rounded-[1.75rem] border border-(--color-border) bg-(--color-bg) p-3 shadow-(--color-shadow-accent) backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-(--color-border-hover) hover:shadow-(--color-shadow-accent-hover)">
+            <div className="group overflow-hidden rounded-[1.75rem] border border-(--color-border) bg-(--color-bg) p-3 shadow-(--shadow-accent) backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-(--color-border-hover) hover:shadow-(--shadow-accent-hover)">
               <div className="rounded-[1.25rem] border border-(--color-border) bg-(--color-surface-strong) p-3 transition-transform duration-300 group-hover:scale-[1.02]">
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <div>

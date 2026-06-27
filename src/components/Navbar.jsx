@@ -32,7 +32,7 @@ export default function Navbar() {
             type="button"
             onClick={toggleTheme}
             aria-label={`Switch to ${isLight ? "dark" : "light"} mode`}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) bg-(--color-surface) text-(--color-text-primary) transition-all duration-300 hover:border-(--color-accent-hover) hover:bg-(--color-surface-hover) hover:text-(--color-accent)"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) bg-(--color-surface) text-(--color-text-primary) cursor-pointer transition-all duration-300 hover:border-(--color-accent-hover) hover:bg-(--color-surface-hover) hover:text-(--color-accent)"
           >
             {isLight ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>

@@ -62,66 +62,66 @@ export default function Contact() {
       <section id="contact" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 space-y-4">
-            <div className="inline-flex items-center gap-3 rounded-full border border-zinc-800/60 bg-zinc-950/50 px-5 py-2.5 text-sm text-zinc-300 backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-cyan-400" />
+            <div className="inline-flex items-center gap-3 rounded-full border border-(--color-border) bg-(--color-surface) px-5 py-2.5 text-sm text-(--color-text-secondary) backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-(--color-accent)" />
               Contact
             </div>
 
             <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Send a <span className="text-cyan-300">message</span>.
+              Send a <span className="text-(--color-brand-gradient-start)">message</span>.
             </h2>
 
-            <p className="text-lg leading-relaxed text-zinc-300">
+            <p className="text-lg leading-relaxed text-(--color-text-secondary)">
               Feel free to reach out. I'm open to freelance work, full-time roles, and practical collaboration.
             </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="rounded-3xl border border-zinc-800/70 bg-zinc-950/55 p-6 shadow-2xl shadow-cyan-950/10 backdrop-blur sm:p-8">
+            <div className="rounded-3xl border border-(--color-border) bg-(--color-surface) p-6 shadow-(--shadow-accent) backdrop-blur sm:p-8">
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <label className="block space-y-2">
-                    <span className="text-sm text-zinc-300">Your name</span>
+                    <span className="text-sm text-(--color-text-secondary)">Your name</span>
                     <input
                       type="text"
                       name="name"
                       required
                       placeholder="Jane Doe"
-                      className="w-full rounded-xl border border-zinc-800/70 bg-zinc-950/60 px-4 py-3 text-zinc-100 outline-none transition-colors placeholder:text-zinc-500 focus:border-cyan-400/60"
+                      className="w-full rounded-xl border border-(--color-border) bg-(--color-surface) px-4 py-3 text-(--color-text-primary) outline-none transition-colors placeholder:text-(--color-text-muted) focus:border-(--color-border-hover)"
                     />
                   </label>
 
                   <label className="block space-y-2">
-                    <span className="text-sm text-zinc-300">Your email</span>
+                    <span className="text-sm text-(--color-text-secondary)">Your email</span>
                     <input
                       type="email"
                       name="email"
                       required
                       placeholder="jane@example.com"
-                      className="w-full rounded-xl border border-zinc-800/70 bg-zinc-950/60 px-4 py-3 text-zinc-100 outline-none transition-colors placeholder:text-zinc-500 focus:border-cyan-400/60"
+                      className="w-full rounded-xl border border-(--color-border) bg-(--color-surface) px-4 py-3 text-(--color-text-primary) outline-none transition-colors placeholder:text-(--color-text-muted) focus:border-(--color-border-hover)"
                     />
                   </label>
                 </div>
 
                 <label className="block space-y-2">
-                  <span className="text-sm text-zinc-300">Subject</span>
+                  <span className="text-sm text-(--color-text-secondary)">Subject</span>
                   <input
                     type="text"
                     name="subject"
                     required
                     placeholder="Project inquiry"
-                    className="w-full rounded-xl border border-zinc-800/70 bg-zinc-950/60 px-4 py-3 text-zinc-100 outline-none transition-colors placeholder:text-zinc-500 focus:border-cyan-400/60"
+                    className="w-full rounded-xl border border-(--color-border) bg-(--color-surface) px-4 py-3 text-(--color-text-primary) outline-none transition-colors placeholder:text-(--color-text-muted) focus:border-(--color-border-hover)"
                   />
                 </label>
 
                 <label className="block space-y-2">
-                  <span className="text-sm text-zinc-300">Message</span>
+                  <span className="text-sm text-(--color-text-secondary)">Message</span>
                   <textarea
                     name="message"
                     rows="7"
                     required
                     placeholder="Tell me a bit about the role, project, or idea..."
-                    className="w-full rounded-xl border border-zinc-800/70 bg-zinc-950/60 px-4 py-3 text-zinc-100 outline-none transition-colors placeholder:text-zinc-500 focus:border-cyan-400/60"
+                    className="w-full rounded-xl border border-(--color-border) bg-(--color-surface) px-4 py-3 text-(--color-text-primary) outline-none transition-colors placeholder:text-(--color-text-muted) focus:border-(--color-border-hover)"
                   />
                 </label>
 
@@ -129,7 +129,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={sending}
-                    className="inline-flex items-center justify-center rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-zinc-950 transition-colors hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="inline-flex items-center justify-center rounded-lg bg-(--color-button-primary-bg) px-6 py-3 font-semibold text-(--color-button-primary-text) cursor-pointer transition-colors hover:bg-(--color-button-primary-hover) disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {sending ? "Sending..." : "Send Message"}
                   </button>
@@ -138,7 +138,7 @@ export default function Contact() {
                 {status.message && (
                   <p
                     className={`text-sm ${
-                      status.type === "success" ? "text-emerald-300" : "text-rose-300"
+                      status.type === "success" ? "text-(--color-status-success)" : "text-(--color-status-error)"
                     }`}
                   >
                     {status.message}
@@ -147,64 +147,64 @@ export default function Contact() {
               </form>
             </div>
 
-            <div className="rounded-3xl border border-zinc-800/70 bg-zinc-950/55 p-6 shadow-2xl shadow-cyan-950/10 backdrop-blur sm:p-8">
+            <div className="rounded-3xl border border-(--color-border) bg-(--color-surface) p-6 shadow-(--shadow-accent) backdrop-blur sm:p-8">
               <div className="space-y-6">
-                <div className="border-b border-zinc-800/70 pb-6">
-                  <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">Contact Information</p>
+                <div className="border-b border-(--color-border) pb-6">
+                  <p className="text-sm uppercase tracking-[0.22em] text-(--color-text-muted)">Contact Information</p>
                 </div>
 
                 <div className="grid gap-4">
-                  <div className="group flex items-center gap-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
-                    <MdOutlineEmail size={21} className="transition-colors duration-300 group-hover:text-cyan-300" />
+                  <div className="group flex items-center gap-3 rounded-2xl border border-(--color-border) bg-(--color-surface-strong) p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-(--color-border-hover) hover:bg-(--color-surface-hover)">
+                    <MdOutlineEmail size={21} className="transition-colors duration-300 group-hover:text-(--color-accent)" />
                     <div>
-                      <p className="text-sm text-zinc-500">Email</p>
+                      <p className="text-sm text-(--color-text-muted)">Email</p>
 
                       <a
                         href={`mailto:${portfolioData.contact.email}`}
-                        className="block text-zinc-100 transition-colors duration-300 hover:text-cyan-300"
+                        className="block text-(--color-text-primary) transition-colors duration-300 hover:text-(--color-accent)"
                       >
                         {portfolioData.contact.email}
                       </a>
                     </div>
                   </div>
 
-                  <div className="group flex items-center gap-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
-                    <MdOutlineLocalPhone size={21} className="transition-colors duration-300 group-hover:text-cyan-300" />
+                  <div className="group flex items-center gap-3 rounded-2xl border border-(--color-border) bg-(--color-surface-strong) p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-(--color-border-hover) hover:bg-(--color-surface-hover)">
+                    <MdOutlineLocalPhone size={21} className="transition-colors duration-300 group-hover:text-(--color-accent)" />
                     <div>
-                      <p className="text-sm text-zinc-500">Phone</p>
+                      <p className="text-sm text-(--color-text-muted)">Phone</p>
                       <a
                         href={`tel:${portfolioData.contact.phone}`}
-                        className="block cursor-pointer text-zinc-100 transition-colors duration-300 hover:text-cyan-300"
+                        className="block cursor-pointer text-(--color-text-primary) transition-colors duration-300 hover:text-(--color-accent)"
                       >
                         +254 717 872 584
                       </a>
                     </div>
                   </div>
 
-                  <div className="group flex items-center gap-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
-                    <FiGithub size={21} className="transition-colors duration-300 group-hover:text-cyan-300" />
+                  <div className="group flex items-center gap-3 rounded-2xl border border-(--color-border) bg-(--color-surface-strong) p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-(--color-border-hover) hover:bg-(--color-surface-hover)">
+                    <FiGithub size={21} className="transition-colors duration-300 group-hover:text-(--color-accent)" />
                     <div>
-                      <p className="text-sm text-zinc-500">GitHub</p>
+                      <p className="text-sm text-(--color-text-muted)">GitHub</p>
                       <a
                         href={portfolioData.contact.links.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="block text-zinc-100 transition-colors duration-300 hover:text-cyan-300"
+                        className="block text-(--color-text-primary) transition-colors duration-300 hover:text-(--color-accent)"
                       >
                         {portfolioData.contact.links.github}
                       </a>
                     </div>
                   </div>
 
-                  <div className="group flex items-center gap-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/25 hover:bg-zinc-900/70">
-                    <FiLinkedin size={21} className="transition-colors duration-300 group-hover:text-cyan-300" />
+                  <div className="group flex items-center gap-3 rounded-2xl border border-(--color-border) bg-(--color-surface-strong) p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-(--color-border-hover) hover:bg-(--color-surface-hover)">
+                    <FiLinkedin size={21} className="transition-colors duration-300 group-hover:text-(--color-accent)" />
                     <div>
-                      <p className="text-sm text-zinc-500">LinkedIn</p>
+                      <p className="text-sm text-(--color-text-muted)">LinkedIn</p>
                       <a
                         href={portfolioData.contact.links.linkedin}
                         target="_blank"
                         rel="noreferrer"
-                        className="block text-zinc-100 transition-colors duration-300 hover:text-cyan-300"
+                        className="block text-(--color-text-primary) transition-colors duration-300 hover:text-(--color-accent)"
                       >
                         {portfolioData.contact.links.linkedin}
                       </a>

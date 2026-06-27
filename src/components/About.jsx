@@ -62,7 +62,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-(--color-border) bg-(--color-surface) p-6 shadow-(--color-shadow-accent) backdrop-blur">
+          <div className="rounded-3xl border border-(--color-border) bg-(--color-surface) p-6 shadow-(--shadow-accent) backdrop-blur">
             <div className="mb-6 flex items-center justify-between border-b border-(--color-border) pb-4">
               <div>
                 <p className="text-sm uppercase tracking-[0.22em] text-(--color-text-muted)">Skills</p>
